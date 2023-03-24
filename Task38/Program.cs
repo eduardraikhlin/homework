@@ -8,8 +8,8 @@ PrintArray(array);
 Console.WriteLine();
 double minNumber = SearchMinNumber(array);
 double maxNumber = SearchMaxNumber(array);
-// double diffMaxMin = DiffMaxMin(maxNumber, minNumber);
-double result = Math.Round(maxNumber - minNumber, 1); // (diffMaxMin, 1)
+double diffMaxMin = DiffMaxMin(maxNumber, minNumber);
+double result = Math.Round(diffMaxMin, 1);
 Console.WriteLine($"Разница между max-элементом и min-элементом равна {result}");
 
 double[] CreateArrayRndDouble(int size, int min, int max)
@@ -62,8 +62,7 @@ double SearchMaxNumber (double[] arr)
     return max;
 }
 
-// double DiffMaxMin (double max, double min);
-// {
-//     double result = max - min;
-//     return result;
-// }
+double DiffMaxMin (double max, double min)
+{
+    return max - min;
+}
